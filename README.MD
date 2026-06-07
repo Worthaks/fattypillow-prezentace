@@ -139,7 +139,7 @@ CSS
 
 ## AI Deník
 
-Při tvorbě projektu jsem používal AI jako konzultanta, generování textů a návrh struktury SEO.
+Při tvorbě projektu jsem používal AI jako konzultanta, generování textů, návrh struktury SEO a vylepšení README.
 
 Použité prompty a jejich přínos:
 
