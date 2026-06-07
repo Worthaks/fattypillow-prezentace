@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktivní Soundboard | FattyPillow</title>
+    <meta name="description" content="Zavzpomínej na ty nejlepší a nejbláznivější hlášky FattyPillowa. Interaktivní soundboard bez reklam.">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo">Fatty<span>Pillow</span></a>
+            <button class="menu-toggle" aria-label="Otevřít menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Biografie</a></li>
+                    <li><a href="soundboard.html" class="active">Soundboard</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="soundboard-section">
+            <h1>Legendární hlášky</h1>
+            <p class="section-desc">Klikni na jakékoliv tlačítko a pusť si legendární hlášku! Vše běží okamžitě díky optimalizovanému Vanilla JS.</p>
+            
+            <div class="board-controls">
+                <button id="stop-all-btn" class="btn btn-secondary">Zastavit vše</button>
+            </div>
+
+            <div class="soundboard-grid" id="soundboard-container">
+                <button class="sound-btn" data-sound="abraka" aria-label="Přehrát hlášku Tlustej buřt">Abrakadabra!</button>
+                <button class="sound-btn" data-sound="boom" aria-label="Přehrát hlášku Starej pes">Boom!</button>
+                <button class="sound-btn" data-sound="facias" aria-label="Přehrát hlášku O babičce">Mit facias..</button>
+                <button class="sound-btn" data-sound="jajsempica" aria-label="Přehrát hlášku Dostaneš banán">Ja jsem pica..</button>
+                <button class="sound-btn" data-sound="stetko" aria-label="Přehrát hlášku Já dostanu infarkt">Stetko!</button>
+                <button class="sound-btn" data-sound="taktojsem" aria-label="Přehrát hlášku Pizza mámo">Tak to jsem..</button>
+                <button class="sound-btn" data-sound="tosesdebil" aria-label="Přehrát hlášku Ale to ne">To jses debil..</button>
+                <button class="sound-btn" data-sound="typico" aria-label="Přehrát hlášku Zvuk bouchačky">Ty pico..</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-text">
+            <p>&copy; 2026 | Ročníková práce z Webových technologií. Neoficiální fan-based web.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/soundboard.js" defer></script>
+</body>
+</html>

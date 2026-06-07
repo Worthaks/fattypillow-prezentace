@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | FattyPillow</title>
+    <meta name="description" content="Kontaktujte nás ohledně fan-based projektu FattyPillow nebo sledujte oficiální sociální sítě.">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo">Fatty<span>Pillow</span></a>
+            <button class="menu-toggle" aria-label="Otevřít menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Biografie</a></li>
+                    <li><a href="soundboard.html">Soundboard</a></li>
+                    <li><a href="kontakt.html" class="active">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="contact-section">
+            <h1>Kontakt a Sítě</h1>
+            <div class="contact-grid">
+                
+                <div class="contact-form-wrapper">
+                    <h2>Napiš nám zde!</h2>
+                    <form id="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="username">Jméno / Přezdívka</label>
+                            <input type="text" id="username" name="username" required>
+                            <span class="error-msg" id="name-error">Jméno musí být vyplněno.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-msg" id="email-error">Zadej platný e-mail.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Zpráva</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <span class="error-msg" id="message-error">Zpráva nesmí být prázdná.</span>
+                        </div>
+                        <button type="submit" class="btn">Odeslat zprávu</button>
+                    </form>
+                    <div id="form-success" class="success-box" role="alert" hidden>Zpráva byla úspěšně odeslána! (ne úplně, protože nevim jak to udělat)</div>
+                </div>
+
+                <div class="contact-links">
+                    <h2>Oficiální Kanály Fattyho</h2>
+                    <p>Pokud chceš Fattyho zastihnout živě, sleduj jeho oficiální platformy:</p>
+                    <ul class="links-list">
+                        <li><a href="https://www.twitch.tv/fattypillow" target="_blank" rel="noopener">Twitch.tv (Živé streamy)</a></li>
+                        <li><a href="https://www.youtube.com/user/FattyPillowTV" target="_blank" rel="noopener">YouTube (Záznamy a vlogy)</a></li>
+                        <li><a href="https://www.instagram.com/fattypilloww/" target="_blank" rel="noopener">Instagram (Zákulisí života)</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-text">
+            <p>&copy; 2026 | Ročníková práce z Webových technologií. Neoficiální fan-based web.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script>
+        // Validace formuláře na klientské straně (Vanilla JS)
+        const form = document.getElementById('contact-form');
+        const successBox = document.getElementById('form-success');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let isValid = true;
+
+            const name = document.getElementById('username');
+            const email = document.getElementById('email');
+            const message = document.getElementById('message');
+
+            if(name.value.trim() === "") {
+                document.getElementById('name-error').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('name-error').style.display = 'none';
+            }
+
+            if(!email.value.includes('@')) {
+                document.getElementById('email-error').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('email-error').style.display = 'none';
+            }
+
+            if(message.value.trim() === "") {
+                document.getElementById('message-error').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('message-error').style.display = 'none';
+            }
+
+            if(isValid) {
+                successBox.hidden = false;
+                form.reset();
+                setTimeout(() => successBox.hidden = true, 5000);
+            }
+        });
+    </script>
+</body>
+</html>

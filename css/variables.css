@@ -1,0 +1,16 @@
+:root {
+    /* Barevná paleta (Fatty / Twitch styl) */
+    --clr-bg-dark: #121212;
+    --clr-bg-card: #1e1e1e;
+    --clr-primary: #ff6600; /* Legendární Fatty oranžová */
+    --clr-primary-hover: #e05500;
+    --clr-text-light: #f5f5f5;
+    --clr-text-muted: #aaaaaa;
+    --clr-error: #ff3333;
+    --clr-success: #00cc66;
+
+    /* Typografie a mezery */
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --max-width: 1200px;
+    --transition: all 0.3s ease;
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://Worthaks.github.io/fattypillow-prezentace/sitemap.xml
