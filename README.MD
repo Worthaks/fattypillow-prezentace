@@ -158,7 +158,7 @@ Prompt 3 (Strukturovaná data):
 
 Přínos AI: Generování bezchybné SEO sémantiky na první dobrou. Odstranilo se riziko ručního psaní složitých závorek v JSON struktuře.
 
-Promt 4 (Pomoc s README)
+Promt 4 (Pomoc s README):
 "Jeste budu potrebovat pomoc s readme, aby to bylo lip citelne a detailny, tady mas soubor co jsem srchnul a jenom bych to potreboval rozebrat" (Připnutí txt souboru se schrnutým README)
 
 Přínos AI: Vygeneroval vydetailovaný soubor README a zvýraznil body kde přidal svoje myšlenky.
